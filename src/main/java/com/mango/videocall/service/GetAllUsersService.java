@@ -33,7 +33,6 @@ public class GetAllUsersService {
                             .username(userEntity.getUsername())
                             .email(userEntity.getEmail())
                             .password(userEntity.getPassword())
-                            .status(userEntity.getStatus())
                             .build();
                     userListResponse.add(userResponse);
                 }
