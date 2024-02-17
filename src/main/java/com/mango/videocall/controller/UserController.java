@@ -1,6 +1,7 @@
 package com.mango.videocall.controller;
 
 import com.mango.videocall.models.entity.UserEntity;
+import com.mango.videocall.models.request.LoginRequestModel;
 import com.mango.videocall.models.request.LogoutRequestModel;
 import com.mango.videocall.models.request.UserRequestModel;
 import com.mango.videocall.service.GetAllUsersService;
@@ -34,8 +35,8 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public UserEntity login(@RequestBody UserRequestModel userRequestModel) {
-        return loginService.login(userRequestModel);
+    public UserEntity login(@RequestBody LoginRequestModel loginRequestModel) {
+        return loginService.login(loginRequestModel);
     }
 
     @PostMapping("/logout")

@@ -22,8 +22,6 @@ public class RegisterService {
             userEntity.setUsername(userRequestModel.getUsername());
             userEntity.setEmail(userRequestModel.getEmail());
             userEntity.setPassword(userRequestModel.getPassword());
-            userEntity.setStatus("online");
-
             user.save(userEntity);
             log.info("Register success");
         } catch (Exception ex) {

@@ -32,8 +32,10 @@ public class UserEntity {
     @Column(name = "created_date")
     private Timestamp createdDate;
 
+
     @PrePersist
-    protected void createDate() {
+    protected void initStatusAndCreatedDate() {
+        status = "online";
         createdDate = Timestamp.valueOf(LocalDateTime.now());
     }
 }
