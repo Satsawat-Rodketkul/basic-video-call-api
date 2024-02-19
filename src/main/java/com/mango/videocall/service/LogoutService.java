@@ -15,10 +15,10 @@ public class LogoutService {
         this.user = user;
     }
 
-    public void logout(LogoutRequestModel email) {
+    public void logout(String email) {
         try {
             // Update user status to offline
-            user.updateStatus(email.getEmail());
+            user.updateStatus("offline", email);
             log.info("User logout success");
         } catch (Exception ex) {
             throw new RuntimeException(ex);

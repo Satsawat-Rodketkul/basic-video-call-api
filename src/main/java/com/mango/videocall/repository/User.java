@@ -14,7 +14,8 @@ public interface User extends JpaRepository<UserEntity, Long> {
     @Modifying
     @Transactional
     @Query(value = """
-            UPDATE user_video_call SET status = 'offline' WHERE email = :email
+            UPDATE user_video_call SET status = :status WHERE email = :email
             """, nativeQuery = true)
-    void updateStatus(@Param("email") String email);
+    void updateStatus(@Param("status") String status, @Param("email") String email);
+
 }

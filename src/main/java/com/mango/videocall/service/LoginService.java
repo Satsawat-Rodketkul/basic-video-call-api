@@ -35,6 +35,7 @@ public class LoginService {
             if (!connectedUser.getPassword().equals(loginRequestModel.getPassword())) {
                 throw new RuntimeException("Password incorrect");
             }
+            user.updateStatus("online", loginRequestModel.getEmail());
             connectedUser.setStatus("online");
             return connectedUser;
         } catch (Exception ex) {
