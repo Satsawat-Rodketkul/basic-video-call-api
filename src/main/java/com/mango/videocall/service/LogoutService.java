@@ -1,6 +1,5 @@
 package com.mango.videocall.service;
 
-import com.mango.videocall.models.request.LogoutRequestModel;
 import com.mango.videocall.repository.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

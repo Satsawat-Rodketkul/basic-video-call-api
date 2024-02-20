@@ -2,7 +2,6 @@ package com.mango.videocall.controller;
 
 import com.mango.videocall.models.entity.UserEntity;
 import com.mango.videocall.models.request.LoginRequestModel;
-import com.mango.videocall.models.request.LogoutRequestModel;
 import com.mango.videocall.models.request.UserRequestModel;
 import com.mango.videocall.service.GetAllUsersService;
 import com.mango.videocall.service.LoginService;
